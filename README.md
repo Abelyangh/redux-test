@@ -44,3 +44,21 @@ simulator redux workflow
 
 6. update webpack.config.js
 
+7. install react-router and react-router-dom
+
+https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf
+
+router must have one root element. 
+
+```
+  <HashRouter>
+	      <Switch>
+			<Route exact path='/' component={App}></Route>
+			<Route path='/home' component={Home}></Route>
+		  </Switch>
+		</HashRouter>
+		
+```
+
+
+

@@ -1,10 +1,12 @@
 import React from 'react';
 import {render} from 'react-dom';
-import {Router, Route, hashHistory, IndexRoute} from 'react-router';
+import {HashRouter, Route, Switch} from 'react-router-dom';
 import  App from './components/app';
+import  Home from './components/home';
 
-render((<Router history={hashHistory}>
-			<Route path='/' component={App}>
-			   
-			<Route>
-		</Router>), document.getElementById('app'));
+render(<HashRouter>
+	      <Switch>
+			<Route exact path='/' component={App}></Route>
+			<Route path='/home' component={Home}></Route>
+		  </Switch>
+		</HashRouter>, document.getElementById('app'));
